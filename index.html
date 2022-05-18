@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage </title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="topBar">
+            <div class="socialButtons">
+                <button onClick="window.open('https://www.linkedin.com/in/zachary-ebaugh-1a3271224/','_blank')" "><img src="/images/linkedInLogo.jpg "></button>
+                <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') "><img src="/images/GitHub-Mark-120px-plus.png "></button>
+                <button onClick="window.open( '', '_blank') "><img src="/images/mailLogo.png "></button>
+            </div>
+            <div class="pageTitle ">
+                <h1>// zle.</h1>
+            </div>
+            <div class="sideBarButton ">
+                <a href="# " class="menu_icon "><i class="material-icons ">dehaze</i></a>
+            </div>
+        </div>
+        <div class="aboutMe ">
+            <div class="aboutMeTitle ">
+                <h1>ABOUT ME.</h1>
+            </div>
+            <div class="aboutMeNameAndButtons ">
+                <div class="nameTitle ">
+                    <h1>Zachary Licong Ebaugh</h1>
+                </div>
+                <div class="moreInfoButtons ">
+                    <button onClick=''>PROJECTS</a>
+                <button onClick="window.open( 'Resume_2021.pdf' , '_blank') ">RESUME</button>
+                </div>
+                <div class="positionTitle ">
+                    <h2>Full-Stack<br>Software<br>Engineer</h2>
+                </div>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    // Cache selectors outside callback for performance. 
+    var $window = $(window),
+        $stickyEl = $('#the-sticky-div'),
+        elTop = $stickyEl.offset().top;
+
+    $window.scroll(function() {
+        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+    });
+</script>

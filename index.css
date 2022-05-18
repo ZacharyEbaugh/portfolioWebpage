@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'doppio_oneregular';
+    src: url('/fonts/Doppio_One/doppioone-regular-webfont.woff2') format('woff2'), url('/fonts/Doppio_One/doppioone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background-color: rgb(231, 231, 231);
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.topBar {
+    height: 7vw;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0.5vw 3vw rgb(143, 143, 143);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.topBar div {
+    float: right;
+}
+
+.socialButtons button {
+    background: transparent;
+    border: none;
+    color: white;
+    margin-left: 2vw;
+    filter: brightness(0);
+}
+
+.socialButtons img {
+    height: 4vw;
+}
+
+.pageTitle {
+    font-family: 'doppio_oneregular';
+    font-size: 3vw;
+    margin-left: 20%;
+}
+
+.sideBarButton {}
+
+.aboutMe {
+    height: 1000px;
+    margin-top: 7vw;
+}
+
+.aboutMeTitle {
+    font-family: 'doppio_oneregular';
+    color: rgb(158, 158, 158);
+    letter-spacing: 0.5vw;
+    font-size: 8vw;
+    margin-left: 3vw;
+    margin-top: 1.5vw;
+    filter: opacity(70%);
+}
+
+.aboutMeNameAndButtons {
+    display: flex;
+}
+
+.aboutMeNameAndButtons h1 {
+    font-family: 'doppio_oneregular';
+    letter-spacing: 0.5vw;
+    font-size: 8vw;
+    margin-left: 3vw;
+}
+
+.aboutMeNameAndButtons h2 {
+    font-family: 'doppio_oneregular';
+    font-size: 2vw;
+    margin-top: 3vw;
+}
+
+.moreInfoButtons {
+    height: 5vw;
+    width: 30vw;
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 14%;
+}
+
+.moreInfoButtons button {
+    height: 4vw;
+    width: 30vw;
+    font-size: 2vw;
+    font-family: 'doppio_oneregular';
+    color: rgb(231, 231, 231);
+    margin-left: 2vw;
+    border: none;
+    border-radius: 40px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.positionTitle {
+    width: 25vw;
+    margin-right: 4%;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+}
+
+.positionTitle h2 {
+    font-size: 4.5vw;
+}
