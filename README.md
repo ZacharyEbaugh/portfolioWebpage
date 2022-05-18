@@ -2,7 +2,7 @@
 ## Description:
 This webpage application is a way for me to showcase my projects in a way which is interactive while also acting as a demonstration of my experience.  This webpage can be found at zacharyebaugh.com and is primarily made with fullscreen desktops in mind
 ## UI Planning:
-![initialPlanning](https://user-images.githubusercontent.com/69406106/168957847-14f6fd92-4ab7-4f7b-94e3-d3092ccdc014.PNG)
+![initialPlanning](https://user-images.githubusercontent.com/69406106/168958568-f3fb1591-c39a-4cf3-8f01-f35face4869b.PNG)
 ### Homepage:
 The homepage acts as a simple introduction, a title, name, and some buttons for important information.  The top bar will be consistent for the entire webpage except for sidebar.
 ### Sidebar:
