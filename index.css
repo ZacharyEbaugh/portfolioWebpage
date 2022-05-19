@@ -74,12 +74,13 @@ body {
     letter-spacing: 0.5vw;
     font-size: 8vw;
     margin-left: 3vw;
-    margin-top: 1.5vw;
+    margin-top: 10vw;
     filter: opacity(70%);
 }
 
 .aboutMeNameAndButtons {
     display: flex;
+    margin-top: 1vw;
 }
 
 .aboutMeNameAndButtons h1 {
@@ -93,6 +94,13 @@ body {
     font-family: 'doppio_oneregular';
     font-size: 2vw;
     margin-top: 3vw;
+}
+
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .moreInfoButtons {
@@ -129,3 +137,37 @@ body {
 .positionTitle h2 {
     font-size: 4.5vw;
 }
+
+.pictureAndExperience {
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic {
+    height: 15vw;
+    width: 15vw;
+    /* padding: 5vw; */
+    margin-left: 5vw;
+    background-color: black;
+}
+
+.profilePic img {
+
+}
+
+.experienceDescription {
+    height: 100%;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.experienceDescription h3 {
+    font-family: 'doppio_oneregular';
+    font-size: 1.6vw;
+}
+
