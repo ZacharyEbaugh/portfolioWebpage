@@ -138,12 +138,41 @@ body {
     font-size: 4.5vw;
 }
 
+.hamburger-menu {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 4.21vw;
+    width: 5vw;
+    margin-left: 38%;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    height: 0.5vw;
+    background: black;
+    border-radius: 2vw;
+    margin: 0.1vw 0vw;
+    transform-origin: left;
+    transition: all 0.4s;
+}
+
+.hamburger-menu:hover .top {
+    transform: rotate(45deg);
+}
+
+.hamburger-menu:hover .middle {
+    opacity: 0;
+}
+
+.hamburger-menu:hover .bottom {
+    transform: rotate(-45deg);
+}
+
 
 /* ========== About Me(Scroll Down) ==========*/
 
 .aboutMeDescription {
-    /* margin-top: 10%; */
-    /* background-color: white; */
     height: 47vw;
 }
 
