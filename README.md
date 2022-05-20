@@ -13,7 +13,7 @@ This is the most animated section of the website.  Pictures showcase the applica
 This is the bottom of the webpage and allows for direct communication between anyone visiting my page and myself.
 ## Languages and Implementation:
 ### HTML5:
-
+Basic HTML was used to create elements for the webpage.  In terms of functionality there was nothing fancy, however new tools I learned about were the use of new tabs for opening links/pdf's from buttons, and the a snap/sticky scroll however this concept was dropped.
 ### CSS3:
 
 ### JavaScript:
