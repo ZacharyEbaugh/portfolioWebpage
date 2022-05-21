@@ -13,7 +13,7 @@
 }
 
 body {
-    height: 90vw;
+    height: 138vw;
     width: auto;
     background-color: rgb(231, 231, 231);
 }
@@ -70,9 +70,7 @@ body {
 /* ========== Splash Page ==========*/
 
 .aboutMe {
-    height: 45vw;
-    /* background-color: white; */
-    /* margin-top: 7vw; */
+    height: 46vw;
 }
 
 .aboutMeTitle {
@@ -173,13 +171,13 @@ body {
 /* ========== About Me(Scroll Down) ==========*/
 
 .aboutMeDescription {
-    height: 47vw;
+    height: 46vw;
 }
 
 .pictureAndExperience {
     height: 55%;
     width: 100%;
-    padding: 3%;
+    padding-right: 2%;
     display: flex;
     justify-content: center;
 }
@@ -304,4 +302,190 @@ body {
 .vscodeAndXamppIcons img {
     height: 4vw;
     margin-left: 20%;
+}
+
+
+/* ========== PROJECTS ==========*/
+
+.projects {
+    height: 46vw;
+}
+
+
+/* ========== Portfolio Webpage ==========*/
+
+.projectsTitle h1 {
+    font-family: 'doppio_oneregular';
+    color: rgb(158, 158, 158);
+    letter-spacing: 0.5vw;
+    font-size: 18vw;
+    margin-left: 3vw;
+    filter: opacity(70%);
+}
+
+.project_PortfolioWebpage {
+    height: 46vw;
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+
+/* ========== Description ==========*/
+
+.portfolioWebpageDescription {
+    height: 100%;
+    width: 35%;
+}
+
+.portfolioWebsiteTitle {
+    background-color: #e7e7e7;
+    animation: openclose 5s ease-in-out 0.3;
+}
+
+.portfolioWebpageDescription h1,
+h2,
+h3 {
+    font-family: 'doppio_oneregular';
+    margin-left: 2vw;
+}
+
+.portfolioWebpageDescription h1 {
+    font-size: 3.5vw;
+    margin-top: 10vw;
+}
+
+@keyframes openclose {
+    0% {
+        top: 0.2rem;
+        width: 0;
+    }
+    5% {
+        width: 0;
+    }
+    15% {
+        width: 230px;
+    }
+    30% {
+        top: 0.2rem;
+        width: 230px;
+    }
+    33% {
+        top: 0.2rem;
+        width: 0;
+    }
+    /* 35% {
+        top: 0.2rem;
+        width: 0;
+    }
+    38% {
+        top: -4.5rem;
+    }
+    48% {
+        top: -4.5rem;
+        width: 190px;
+    }
+    62% {
+        top: -4.5rem;
+        width: 190px;
+    }
+    66% {
+        top: -4.5rem;
+        width: 0;
+        text-indent: 0;
+    }
+    71% {
+        top: -9rem;
+        width: 0;
+        text-indent: 5px;
+    }
+    86% {
+        top: -9rem;
+        width: 285px;
+    }
+    95% {
+        top: -9rem;
+        width: 285px;
+    }
+    98% {
+        top: -9rem;
+        width: 0;
+        text-indent: 5px;
+    }
+    100% {
+        top: 0;
+        width: 0;
+        text-indent: 0;
+    } */
+}
+
+.portfolioWebpageDescription h2 {
+    font-size: 1.7vw;
+}
+
+.portfolioWebpageDescription h3 {
+    font-size: 1.1vw;
+}
+
+.portfolioWebpageButtons {
+    height: 4vw;
+    width: 30vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    display: flex;
+}
+
+.portfolioWebpageButtons button {
+    background-color: black;
+    color: #e7e7e7;
+    font-family: 'doppio_oneregular';
+    font-size: 1.7vw;
+    height: 3vw;
+    width: 10vw;
+    margin-left: 3vw;
+    border: none;
+    border-radius: 5vw;
+}
+
+.codeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.codeBtn span {
+    margin-right: 3vw;
+}
+
+.codeBtn img {
+    width: 2vw;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    z-index: 2;
+    margin-left: 2.4vw;
+    margin-bottom: 2vw;
+}
+
+
+/* ========== Representation ==========*/
+
+.portfolioWebpageRepresentation {
+    height: 100%;
+    width: 65%;
+    /* background-color: rgb(108, 108, 255); */
+    display: flex;
+}
+
+.desktopScreen img {
+    height: 25vw;
+    /* width: 35vw; */
+    margin-top: 1.53vw;
+    margin-left: 1vw;
+}
+
+.iphoneDemo img {
+    height: 32vw;
+    margin-top: 25vw;
 }
