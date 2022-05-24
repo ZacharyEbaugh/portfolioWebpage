@@ -12,141 +12,262 @@
 
 <body>
     <div class="container">
+        <div class="sidebar " id="rightMenu ">
+            <a href="#aboutMe" class="aboutMeJump ">About Me</a>
+            <a href="#projectPoint" class="projectsJump ">Projects</a>
+            <a href="# " class="contactMeJump ">Contact</a>
+        </div>
         <div class="topBar">
             <div class="socialButtons">
-                <button onClick="window.open('https://www.linkedin.com/in/zachary-ebaugh-1a3271224/','_blank')" "><img src="/images/linkedInLogo.jpg "></button>
-                    <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') "><img src="/images/GitHub-Mark-120px-plus.png "></button>
-                    <button onClick="window.open( '', '_blank') "><img src="/images/mailLogo.png "></button>
-                </div>
-                <div class="pageTitle ">
-                    <h1>// zle.</h1>
-                </div>
+                <button onClick="window.open('https://www.linkedin.com/in/zachary-ebaugh-1a3271224/','_blank')"><img src="/images/linkedInLogo.jpg "></button>
+                <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') "><img src="/images/GitHub-Mark-120px-plus.png "></button>
+                <button onClick="window.open( '', '_blank') "><img src="/images/mailLogo.png "></button>
+            </div>
+            <div class="pageTitle ">
+                <h1>// zle.</h1>
+            </div>
+            <div class="sidebarButton ">
                 <div class="hamburger-menu ">
                     <div class="bar top "></div>
                     <div class="bar middle "></div>
                     <div class="bar bottom "></div>
                 </div>
+                </input>
             </div>
+
+            <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'>
+            </script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    function toggleSidebar() {
+                        $(".sidebarButton").toggleClass("active");
+                        console.log("clicked");
+                        // $("main").toggleClass("move-to-left");
+                        $(".sidebar").toggleClass("active");
+                    }
+
+                    $(".sidebarButton").on("click tap", function() {
+                        toggleSidebar();
+                    });
+
+                    $(document).keyup(function(e) {
+                        if (e.keyCode === 27) {
+                            toggleSidebar();
+                        }
+                    });
+                });
+            </script>
         </div>
-        <div class="aboutMe ">
-            <div class="aboutMeTitle ">
-                <h1>ABOUT ME.</h1>
+    </div>
+    <div class="aboutMe ">
+        <div class="aboutMeTitle ">
+            <h1>ABOUT ME.</h1>
+        </div>
+        <div class="aboutMeNameAndButtons " id="aboutMePoint">
+            <div class="nameTitle ">
+                <h1>Zachary Licong Ebaugh</h1>
             </div>
-            <div class="aboutMeNameAndButtons ">
-                <div class="nameTitle ">
-                    <h1>Zachary Licong Ebaugh</h1>
-                </div>
-                <div class="moreInfoButtons ">
-                    <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') ">PROJECTS</a>
+            <div class="moreInfoButtons " id="aboutMe">
+                <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') ">PROJECTS</a>
                 <button onClick="window.open( 'Resume_2021.pdf' , '_blank') ">RESUME</button>
+            </div>
+            <div class="positionTitle ">
+                <h2>Full-Stack<br>Software<br>Engineer</h2>
+            </div>
+        </div>
+    </div>
+    <div class="aboutMeDescription ">
+        <div class="pictureAndExperience ">
+            <div class="profilePic ">
+                <img src="/images/profilePic2.jpg " alt="Profile Picture ">
+            </div>
+            <div class="experienceDescription ">
+                <h3>
+                    <br>I am a junior at UCF majoring in Computer Science with a minor in Mathematics and a focus on full-stack development. I have a particular interest in database optimization and I am starting to get into iOS/Android development.<br><br>I
+                    spend most of my time working on projects and going to class but outside of school I love to go to the gym, play basketball, and occasionally play video games.
+                </h3>
+            </div>
+        </div>
+        <div class="toolsExperienceBar ">
+            <div class="frontEnd ">
+                <h1>Front-End</h1>
+                <div class="stackIcons ">
+                    <img src="/images/toolsIcons/frontEnd/HTML_CSS_JS_icons.png " alt="HTML_CSS_JS_icons ">
                 </div>
-                <div class="positionTitle ">
-                    <h2>Full-Stack<br>Software<br>Engineer</h2>
+                <div class="reactIcon ">
+                    <img src="/images/toolsIcons/frontEnd/reactNativeIcon.png " alt="reactNativeIcon ">
+                </div>
+            </div>
+            <div class="backEnd ">
+                <h1>Back-End</h1>
+                <div class="javaAndPythonIcons ">
+                    <img src="/images/toolsIcons/backEnd/javaIcon.png " alt="javaIcon ">
+                    <img src="/images/toolsIcons/backEnd/python_icon.webp " alt="pythonIcon ">
+                </div>
+                <div class="mySQLIcon ">
+                    <img src="/images/toolsIcons/backEnd/mySQLIcon.png " alt="mySQLIcon ">
+                </div>
+                <div class="phpIcons ">
+                    <img src="/images/toolsIcons/backEnd/phpIcon.png " alt="phpIcon ">
+                    <img src="/images/toolsIcons/backEnd/phpMyAdminIcon.png " alt="phpMyAdminIcon ">
+                </div>
+            </div>
+            <div class="otherTools ">
+                <h1>Other</h1>
+                <div class="swiftAndCIcons ">
+                    <img src="/images/toolsIcons/OtherTools/swiftIcon.png " alt="swiftIcon ">
+                    <img src="/images/toolsIcons/OtherTools/cIcon.png " alt="cIcon ">
+                </div>
+                <div class="figmaIcon ">
+                    <img src="/images/toolsIcons/OtherTools/figmaIcon.png " alt="figmaIcon ">
+                </div>
+                <div class="vscodeAndXamppIcons ">
+                    <img src="/images/toolsIcons/OtherTools/vscodeIcon.png " alt="vscodeIcon ">
+                    <img src="/images/toolsIcons/OtherTools/xamppIcon.png " alt="xamppIcon ">
                 </div>
             </div>
         </div>
-        <div class="aboutMeDescription ">
-            <div class="pictureAndExperience ">
-                <div class="profilePic ">
-                    <img src="/images/profilePic2.jpg " alt="Profile Picture ">
-                </div>
-                <div class="experienceDescription ">
-                    <h3>
-                        <br>I am a junior at UCF majoring in Computer Science with a minor in Mathematics 
-                        and a focus on full-stack development.  I have a particular interest in database optimization 
-                        and I am starting to get into iOS/Android development.<br><br>I spend most of my time working on 
-                        projects and going to class but outside of school I love to go to the gym, play basketball, 
-                        and occasionally play video games.
-                    </h3>
-                </div>
-            </div>
-            <div class="toolsExperienceBar ">
-                <div class="frontEnd ">
-                    <h1>Front-End</h1>
-                    <div class="stackIcons ">
-                        <img src="/images/toolsIcons/frontEnd/HTML_CSS_JS_icons.png " alt="HTML_CSS_JS_icons ">
-                    </div>
-                    <div class="reactIcon ">
-                        <img src="/images/toolsIcons/frontEnd/reactNativeIcon.png " alt="reactNativeIcon ">
-                    </div>
-                </div>
-                <div class="backEnd ">
-                    <h1>Back-End</h1>
-                        <div class="javaAndPythonIcons ">
-                            <img src="/images/toolsIcons/backEnd/javaIcon.png " alt="javaIcon ">
-                            <img src="/images/toolsIcons/backEnd/python_icon.webp " alt="pythonIcon ">
-                        </div>
-                        <div class="mySQLIcon ">
-                            <img src="/images/toolsIcons/backEnd/mySQLIcon.png " alt="mySQLIcon ">
-                        </div>
-                        <div class="phpIcons ">
-                            <img src="/images/toolsIcons/backEnd/phpIcon.png " alt="phpIcon ">
-                            <img src="/images/toolsIcons/backEnd/phpMyAdminIcon.png " alt="phpMyAdminIcon "> 
-                        </div>
-                </div>
-                <div class="otherTools ">
-                    <h1>Other</h1>
-                    <div class="swiftAndCIcons ">
-                        <img src="/images/toolsIcons/OtherTools/swiftIcon.png " alt="swiftIcon ">
-                        <img src="/images/toolsIcons/OtherTools/cIcon.png " alt="cIcon ">
-                    </div>
-                    <div class="figmaIcon ">
-                        <img src="/images/toolsIcons/OtherTools/figmaIcon.png " alt="figmaIcon ">
-                    </div>
-                    <div class="vscodeAndXamppIcons ">
-                        <img src="/images/toolsIcons/OtherTools/vscodeIcon.png " alt="vscodeIcon ">
-                        <img src="/images/toolsIcons/OtherTools/xamppIcon.png " alt="xamppIcon "> 
-                    </div>
-                </div>
-            </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js'></script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js'></script>
+
+    <div class="projects ">
+        <div class="projectsTitle ">
+            <h1>PROJECTS.</h1>
         </div>
-        <div class="projects ">
-            <div class="projectsTitle ">
-                <h1>PROJECTS.</h1>
+        <section class="project_PortfolioWebpage " id="projectPoint">
+            <div class="portfolioWebpageDescription" id="portfolioDescription">
+                <div class="portfolioWebsiteTitle ">
+                    <h1>Portfolio Website</h1>
+                </div>
+
+                <h2>HTML5 | CSS3 | JavaScript</h2>
+                <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
+                </h3>
+                <div class="portfolioWebpageButtons ">
+                    <!-- <button>&ltCode&gt</button> -->
+                    <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
+                            <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
+                            <span>Code</span>
+                        </button>
+                    <button>Deployed</button>
+                </div>
             </div>
-            <div class="project_PortfolioWebpage ">
-                <div class="portfolioWebpageDescription ">
-                    <div class="portfolioWebsiteTitle ">
-                        <h1>Portfolio Website</h1>
+            <div class="portfolioWebpageRepresentation ">
+                <blockquote class="desktopScreen ">
+                    <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
+                </blockquote>
+                <div class="iphoneDemo ">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+            let sections = gsap.utils.toArray(".project_PortfolioWebpage");
+
+            gsap.to(sections, {
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".project_PortfolioWebpage",
+                    pin: true,
+                    scrub: 1,
+                    snap: 1 / (sections.length - 1),
+                }
+            });
+
+            var portfolioDesktopScreen = new TimelineMax();
+            portfolioDesktopScreen.to(".desktopScreen", {
+                scrollTrigger: {
+                    trigger: ".projectsTitle",
+                    scrub: true,
+                    start: "100px top",
+                    end: "5000px bottom"
+                },
+                y: 800,
+            });
+
+            var portfolioDesc = new TimelineMax();
+            portfolioDesc.to(".portfolioWebpageDescription", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: true,
+                    start: "100px center"
+                },
+                end: "bottom",
+                y: -300,
+            });
+
+            var portfolioPhoneScreen = new TimelineMax();
+            portfolioDesc.to(".iphoneDemo", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: true,
+                    start: "100px center"
+                },
+                end: "bottom",
+                y: -1300,
+            });
+        </script>
+
+        <section>
+            <section class="project_PhotoCode ">
+                <div class="PhotoCodeDescription">
+                    <div class="PhotoCodeTitle">
+                        <h1>PhotoCode</h1>
                     </div>
-                    
+                    <h2>ReactNative | PHP | MySQLi</h2>
                     <h2>HTML5 | CSS3 | JavaScript</h2>
-                    <h3>A professional and interactive way for me to communicate my skills 
-                        and experience to potential employers.  This project is my first 
-                        deployed website written by myself.
+                    <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
                     </h3>
                     <div class="portfolioWebpageButtons ">
                         <!-- <button>&ltCode&gt</button> -->
                         <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
-                            <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
-                            <span>Code</span>
-                        </button>
+                                <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
+                                <span>Code</span>
+                            </button>
                         <button>Deployed</button>
                     </div>
                 </div>
                 <div class="portfolioWebpageRepresentation ">
-                    <!--  -->
-                    <div class="desktopScreen ">
-                        <img src="/images/project_portfolio_webpage/desktopDemo.PNG " alt="desktop Screen ">
-                    </div>
+                    <blockquote class="desktopScreen ">
+                        <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
+                    </blockquote>
                     <div class="iphoneDemo ">
-                        <img src="/images/iphoneDemo.png " alt="Portfolio iPhone ">
+                        <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
+        <section>
+            <h1>Clone</h1>
+        </section>
+    </div>
     </div>
 </body>
 
 </html>
 
 <script>
-    // Cache selectors outside callback for performance. 
-    var $window = $(window),
-        $stickyEl = $('#the-sticky-div'),
-        elTop = $stickyEl.offset().top;
+    // // Cache selectors outside callback for performance. 
+    // let portfolioDesktopScreen = document.getElementById('desktopScreen');
 
-    $window.scroll(function() {
-        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
-    });
+    // // portfolioDesktopScreen.style.bottom = 0;
+
+    // window.addEventListener('scroll', function() {
+    //     let value = window.scrollY;
+    //     portfolioDesktopScreen.style.left = value + 'px';
+    // })
 </script>
