@@ -15,13 +15,13 @@
         <div class="sidebar " id="rightMenu ">
             <a href="#aboutMe" class="aboutMeJump ">About Me</a>
             <a href="#projectPoint" class="projectsJump ">Projects</a>
-            <a href="# " class="contactMeJump ">Contact</a>
+            <a href="#contactPoint" class="contactMeJump ">Contact</a>
         </div>
         <div class="topBar">
             <div class="socialButtons">
                 <button onClick="window.open('https://www.linkedin.com/in/zachary-ebaugh-1a3271224/','_blank')"><img src="/images/linkedInLogo.jpg "></button>
                 <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') "><img src="/images/GitHub-Mark-120px-plus.png "></button>
-                <button onClick="window.open( '', '_blank') "><img src="/images/mailLogo.png "></button>
+                <a href=" #contactPoint " class="contactMeButton "><img src="/images/mailLogo.png "></a>
             </div>
             <div class="pageTitle ">
                 <h1>// zle.</h1>
@@ -165,18 +165,25 @@
                 </div>
             </div>
             <div class="portfolioWebpageRepresentation ">
-                <blockquote class="desktopScreen ">
-                    <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
-                </blockquote>
                 <div class="iphoneDemo ">
                     <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
                 </div>
+                <div class="iphoneDemo2">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+                <div class="iphoneDemo3">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+                <blockquote class="desktopScreen ">
+                    <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
+                </blockquote>
+
             </div>
         </section>
 
 
         <script>
-            let sections = gsap.utils.toArray(".project_PortfolioWebpage");
+            let sections = gsap.utils.toArray(".projects");
 
             gsap.to(sections, {
                 ease: "none",
@@ -191,83 +198,115 @@
             var portfolioDesktopScreen = new TimelineMax();
             portfolioDesktopScreen.to(".desktopScreen", {
                 scrollTrigger: {
-                    trigger: ".projectsTitle",
-                    scrub: true,
-                    start: "100px top",
-                    end: "5000px bottom"
+                    trigger: ".projects",
+                    scrub: 1,
+                    start: "-100px top",
+                    end: "bottom",
+                    markers: true,
                 },
-                y: 800,
+                end: "top",
+                y: -1200,
             });
 
             var portfolioDesc = new TimelineMax();
             portfolioDesc.to(".portfolioWebpageDescription", {
                 scrollTrigger: {
                     trigger: ".portfolioWebpageDescription",
-                    scrub: true,
+                    scrub: 1,
                     start: "100px center"
                 },
                 end: "bottom",
-                y: -300,
+                y: -450,
             });
 
             var portfolioPhoneScreen = new TimelineMax();
-            portfolioDesc.to(".iphoneDemo", {
+            portfolioPhoneScreen.to(".iphoneDemo", {
                 scrollTrigger: {
                     trigger: ".portfolioWebpageDescription",
-                    scrub: true,
-                    start: "100px center"
+                    scrub: 1,
+                    start: "100px center",
+                    // markers: true,
                 },
                 end: "bottom",
-                y: -1300,
+                y: -2000,
+            });
+
+            var portfolioPhoneScreen2 = new TimelineMax();
+            portfolioPhoneScreen.to(".iphoneDemo2", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    // markers: true,
+                },
+                end: "bottom",
+                y: -1800,
+            });
+
+            var portfolioPhoneScreen3 = new TimelineMax();
+            portfolioPhoneScreen.to(".iphoneDemo3", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    // markers: true,
+                },
+                end: "bottom",
+                y: -1500,
             });
         </script>
 
-        <section>
-            <section class="project_PhotoCode ">
-                <div class="PhotoCodeDescription">
-                    <div class="PhotoCodeTitle">
-                        <h1>PhotoCode</h1>
-                    </div>
-                    <h2>ReactNative | PHP | MySQLi</h2>
-                    <h2>HTML5 | CSS3 | JavaScript</h2>
-                    <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
-                    </h3>
-                    <div class="portfolioWebpageButtons ">
-                        <!-- <button>&ltCode&gt</button> -->
-                        <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
+        <section class="project_PhotoCode ">
+            <div class="PhotoCodeDescription">
+                <div class="PhotoCodeTitle">
+                    <h1>PhotoCode</h1>
+                </div>
+                <h2>ReactNative | PHP | MySQLi</h2>
+                <h2>HTML5 | CSS3 | JavaScript</h2>
+                <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
+                </h3>
+                <div class="portfolioWebpageButtons ">
+                    <!-- <button>&ltCode&gt</button> -->
+                    <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
                                 <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
                                 <span>Code</span>
                             </button>
-                        <button>Deployed</button>
-                    </div>
+                    <button>Deployed</button>
                 </div>
-                <div class="portfolioWebpageRepresentation ">
-                    <blockquote class="desktopScreen ">
-                        <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
-                    </blockquote>
-                    <div class="iphoneDemo ">
-                        <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                    </div>
+            </div>
+            <div class="portfolioWebpageRepresentation ">
+                <blockquote class="desktopScreen ">
+                    <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
+                </blockquote>
+                <div class="iphoneDemo ">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
                 </div>
-            </section>
+            </div>
         </section>
         <section>
             <h1>Clone</h1>
         </section>
     </div>
     </div>
+
+
+    <div class="contactMe" id="contactPoint">
+        <div class="contactTitle">
+            <h1>CONTACT ME.</h1>
+        </div>
+        <div class="information">
+            <div class="mainInfo">
+                <input type="text" name="userName" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="organization" placeholder="Organization">
+            </div>
+            <div class="messageInfo">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Message"></textarea>
+                <button name="submitMessage" onclick="">SEND</button>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
-
-<script>
-    // // Cache selectors outside callback for performance. 
-    // let portfolioDesktopScreen = document.getElementById('desktopScreen');
-
-    // // portfolioDesktopScreen.style.bottom = 0;
-
-    // window.addEventListener('scroll', function() {
-    //     let value = window.scrollY;
-    //     portfolioDesktopScreen.style.left = value + 'px';
-    // })
-</script>

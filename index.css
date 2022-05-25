@@ -63,18 +63,22 @@ body {
     height: 4vw;
 }
 
+.contactMeButton {
+    margin-left: 2vw;
+}
+
 .pageTitle {
     font-family: 'doppio_oneregular';
     font-size: 3vw;
-    margin-left: 20%;
+    margin-left: 19.85%;
 }
 
 .sidebarButton {
     height: 100%;
     width: 10vw;
     position: absolute;
-    top: 0.5vw;
-    right: 1.5vw;
+    top: 1.4vw;
+    right: 2.6vw;
 }
 
 .sidebarButton button {
@@ -419,7 +423,7 @@ body {
 /* ========== PROJECTS ==========*/
 
 .projects {
-    height: 46vw;
+    height: 300vw;
 }
 
 section {
@@ -457,7 +461,7 @@ section {
 .PhotoCodeDescription {
     height: 100%;
     width: 35%;
-    padding-top: 5vw;
+    padding-top: 12vw;
     /* background-color: red; */
 }
 
@@ -609,15 +613,114 @@ h3 {
 }
 
 .desktopScreen img {
-    height: 25vw;
+    height: 28vw;
     /* width: 35vw; */
-    margin-top: 3vw;
-    margin-left: 1vw;
+    margin-top: 50vw;
+    margin-left: 16vw;
     position: absolute;
+    z-index: 1;
 }
 
 .iphoneDemo img {
-    height: 32vw;
-    margin-top: 30vw;
-    margin-left: 45vw;
+    height: 25vw;
+    margin-top: 40vw;
+    margin-left: 5vw;
+    z-index: 1;
+    position: absolute;
+}
+
+.iphoneDemo2 img {
+    height: 19vw;
+    margin-top: 60vw;
+    margin-left: 0vw;
+    z-index: 2;
+    position: absolute;
+}
+
+.iphoneDemo3 img {
+    height: 16vw;
+    margin-top: 60vw;
+    margin-left: 10vw;
+    z-index: 3;
+    position: absolute;
+}
+
+
+/* ========== Contact Me ==========*/
+
+.contactMe {
+    height: 87vh;
+    background-color: black;
+    box-shadow: 0 -3vw 10vw 3vw rgb(0, 0, 0);
+}
+
+.contactTitle {
+    /* background-color: white; */
+    height: 15.5vw;
+}
+
+.contactTitle h1 {
+    font-family: 'doppio_oneregular';
+    font-size: 15vw;
+    color: #e7e7e7;
+    margin-left: 4vw;
+}
+
+.information {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin-top: 1vw; */
+}
+
+.mainInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+}
+
+.mainInfo input {
+    height: 4vw;
+    width: 30vw;
+    background-color: #e7e7e7;
+    font-size: 2vw;
+    font-family: 'doppio_oneregular';
+    padding-left: 1.5vw;
+    border: none;
+    border-radius: 1vw;
+    margin-top: 5vw;
+    margin-left: 10vw;
+}
+
+.messageInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.messageInfo textarea {
+    height: 15vw;
+    width: 30vw;
+    border: none;
+    border-radius: 1vw;
+    background-color: #e7e7e7;
+    font-size: 2vw;
+    font-family: 'doppio_oneregular';
+    padding-left: 1.5vw;
+    padding-top: 0.5vw;
+    margin-left: 5vw;
+    margin-top: 2.5vw;
+    overflow-y: scroll;
+}
+
+.messageInfo button {
+    height: 3vw;
+    width: 13vw;
+    margin-top: 2vw;
+    margin-left: 14vw;
+    border: none;
+    border-radius: 2vw;
+    font-family: 'doppio_oneregular';
+    font-size: 2vw;
+    cursor: pointer;
 }
