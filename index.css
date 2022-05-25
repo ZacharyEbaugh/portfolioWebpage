@@ -61,6 +61,7 @@ body {
 
 .socialButtons img {
     height: 4vw;
+    cursor: pointer;
 }
 
 .contactMeButton {
@@ -423,7 +424,7 @@ body {
 /* ========== PROJECTS ==========*/
 
 .projects {
-    height: 300vw;
+    height: 475vw;
 }
 
 section {
@@ -649,7 +650,7 @@ h3 {
 /* ========== Contact Me ==========*/
 
 .contactMe {
-    height: 87vh;
+    height: 47vw;
     background-color: black;
     box-shadow: 0 -3vw 10vw 3vw rgb(0, 0, 0);
 }
