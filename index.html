@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="index.css?v=2" />
 </head>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js'></script>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js'></script>
+
+
 <body>
     <div class="container">
         <div class="sidebar " id="rightMenu ">
@@ -61,7 +75,7 @@
     </div>
     <div class="aboutMe ">
         <div class="intro">
-            <h1>Hi, my name is...</h1>
+            <h1>Hi, my name is...<span></span></h1>
         </div>
         <div class="aboutMeNameAndButtons " id="aboutMePoint">
             <div class="animated-title">
@@ -78,7 +92,448 @@
             <button onClick="window.open( 'Resume_2021.pdf' , '_blank') ">RESUME</button>
         </div>
     </div>
+
+    <div class="projects ">
+        <div class="projectsTitle ">
+            <h1>PROJECTS.</h1>
+        </div>
+        <section class="project_PortfolioWebpage " id="projectPoint">
+            <div class="portfolioWebpageDescription" id="portfolioDescription">
+                <div class="portfolioWebsiteTitle ">
+                    <span class="titleBlock"></span>
+                    <h1>Portfolio Website<span class="filler"></span></h1>
+                </div>
+                <span class="toolBlock"></span>
+                <h2>HTML5 | CSS3 | JavaScript<span></span></h2>
+                <span class="descBlock"></span>
+                <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
+                    <span></span></h3>
+                <div class="portfolioWebpageButtons ">
+                    <!-- <button>&ltCode&gt</button> -->
+                    <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
+                            <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
+                            <span>Code</span>
+                        </button>
+                    <button>Deployed</button>
+                </div>
+            </div>
+            <div class="portfolioWebpageRepresentation ">
+                <div class="iphoneDemo2">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+                <blockquote class="desktopScreen ">
+                    <img src="/images/project_portfolio_webpage/portfolioWebpage_desktopDemo.png " id="desktopScreen ">
+                </blockquote>
+                <div class="iphoneDemo ">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+
+            </div>
+        </section>
+
+
+        <script>
+            let sections = gsap.utils.toArray(".projects");
+
+            gsap.to(sections, {
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".project_PortfolioWebpage",
+                    pin: true,
+                    start: "-250px top",
+                    end: "2000px top",
+                    scrub: 1,
+                    // markers: true,
+                    snap: 1 / (sections.length - 1),
+                }
+            });
+
+            // ==========/ PORTFOLLIO: Desktop /========== //
+
+            var portfolioDesktopScreen = new TimelineMax();
+            portfolioDesktopScreen.to(".desktopScreen", {
+                scrollTrigger: {
+                    trigger: ".projects",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "3800px top",
+                },
+                end: "top",
+                y: -900,
+            });
+
+            // ==========/ PORTFOLIO: Description /========== //
+
+            var portfolioDesc = new TimelineMax();
+            portfolioDesc.to(".portfolioWebpageDescription", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "3800px top",
+                },
+                end: "bottom",
+                y: -550,
+            });
+
+            $('.titleBlock').css("animation-play-state", "paused");
+            $('.toolBlock').css("animation-play-state", "paused");
+            $('.descBlock').css("animation-play-state", "paused");
+            $(window).scroll(function() {
+                var hT = $('.descBlock').offset().top,
+                    hH = $('.descBlock').outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(this).scrollTop();
+                console.log(wS + "    " + (hT + hH - wH));
+                if (wS > (hT + hH - wH)) {
+                    $('.titleBlock ').css("animation-play-state", "running");
+                    $('.toolBlock ').css("animation-play-state", "running");
+                    $('.descBlock ').css("animation-play-state", "running");
+                    console.log('H1 on the view!');
+                    console.log("FOUND");
+                }
+            });
+
+            // ==========/ PORTFOLIO: Phone1 /========== //
+
+            var portfolioPhoneScreen = new TimelineMax();
+            portfolioPhoneScreen.to(".iphoneDemo", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "3800px top",
+                    // markers: true,
+                },
+                end: "bottom",
+                y: -1542,
+            });
+
+            // ==========/ PORTFOLIO: Phone2 /========== //
+
+            var portfolioPhoneScreen2 = new TimelineMax();
+            portfolioPhoneScreen.to(".iphoneDemo2", {
+                scrollTrigger: {
+                    trigger: ".portfolioWebpageDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "3800px top",
+                },
+                end: "bottom",
+                y: -969,
+            });
+        </script>
+
+        <section class="project_PhotoCode ">
+            <div class="PhotoCodeDescription">
+                <div class="PhotoCodeTools">
+                    <div class="PhotoCodeTitle">
+                        <span class="PhotoCode_titleBlock"></span>
+                        <h1 style="color: #E7E7E7">PhotoCode<span></span></h1>
+                    </div>
+                    <span class="PhotoCode_toolBlock1"></span>
+                    <h2 style="color: #E7E7E7">ReactNative | PHP | MySQLi<span></span></h2>
+                    <span class="PhotoCode_toolBlock2"></span>
+                    <h2 style="color: #E7E7E7">HTML5 | CSS3 | JavaScript<span></span></h2>
+                    <span class="PhotoCode_descBlock"></span>
+                    <h3 style="color: #E7E7E7">PhotoCode utilizes Apple's Scan-to-Text feature to scan-in, compile, and execute code from your phone. Photocode also features a webpage application to view and edit stored files uploaded from the mobile app.
+                        <span></span></h3>
+                    <div class="PhotoCodeButtons ">
+                        <!-- <button>&ltCode&gt</button> -->
+                        <button class="codeBtn2" onClick="window.open( 'https://github.com/ZacharyEbaugh/PhotoCode', '_blank') ">
+                                    <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
+                                    <span>Code</span>
+                                </button>
+                        <button>In Progress</button>
+                    </div>
+                </div>
+                <blockquote class="PhotoCodeDesktop ">
+                    <img src="/images/project_portfolio_webpage/desktopDemoBlack.PNG " id="desktopScreen ">
+                </blockquote>
+            </div>
+            <div class="portfolioWebpageRepresentation ">
+                <div class="PhotoCodePhone2 ">
+                    <img src="/images/project_PhotoCode/PhotoCode _sidebar.png " id="PhotoCode_sidebar ">
+                </div>
+                <div class="PhotoCodePhone3 ">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+                <div class="PhotoCodePhone4 ">
+                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                </div>
+                <div class="PhotoCodePhone1 ">
+                    <img src="/images/project_PhotoCode/PhotoCode _homepage.png " id="PhotoCode_homepage ">
+                    <!-- <object data="/images/project_PhotoCode/PhotoCode_IphoneDemo.pdf" type=""></object> -->
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let sections2 = gsap.utils.toArray(".project_PhotoCode");
+
+            gsap.to(sections, {
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".project_PhotoCode",
+                    pin: true,
+                    start: "-130px top",
+                    end: "2000px top",
+                    scrub: 1,
+                    snap: 1 / (sections.length - 1),
+                    // markers: true,
+                }
+            });
+
+            // ==========/ PHOTOCODE: Description /========== //
+
+            var portfolioDesc = new TimelineMax();
+            portfolioDesc.to(".PhotoCodeTools", {
+                scrollTrigger: {
+                    trigger: ".PhotoCodeDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "1000px top",
+                    // markers: true,
+                },
+                end: "bottom",
+                y: -280,
+            });
+
+            $('.PhotoCode_titleBlock').css("animation-play-state", "paused");
+            $('.PhotoCode_toolBlock1').css("animation-play-state", "paused");
+            $('.PhotoCode_toolBlock2').css("animation-play-state", "paused");
+            $('.PhotoCode_descBlock').css("animation-play-state", "paused");
+            $(window).scroll(function() {
+                var hT = $('.PhotoCode_descBlock').offset().top,
+                    hH = $('.PhotoCode_descBlock').outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(this).scrollTop();
+                console.log(wS + "    " + (hT + hH - wH));
+                if (wS > (hT + hH - wH)) {
+                    $('.PhotoCode_titleBlock ').css("animation-play-state", "running");
+                    $('.PhotoCode_toolBlock1 ').css("animation-play-state", "running");
+                    $('.PhotoCode_toolBlock2 ').css("animation-play-state", "running");
+                    $('.PhotoCode_descBlock ').css("animation-play-state", "running");
+                }
+            });
+
+            // ==========/ PHOTOCODE: Desktop /========== //
+
+            var portfolioDesktopScreen = new TimelineMax();
+            portfolioDesktopScreen.to(".PhotoCodeDesktop", {
+                scrollTrigger: {
+                    trigger: ".PhotoCodeDescription",
+                    scrub: 1,
+                    start: "50px center",
+                    end: "2800px top",
+
+                },
+                end: "top",
+                y: -300,
+            });
+
+            // ==========/ PHOTOCODE: Phone1 /========== //
+
+            var portfolioPhoneScreen = new TimelineMax();
+            portfolioPhoneScreen.to(".PhotoCodePhone1", {
+                scrollTrigger: {
+                    trigger: ".PhotoCodeDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "2800px top",
+                },
+                end: "bottom",
+                y: -1900,
+            });
+
+            // ==========/ PHOTOCODE: Phone2 /========== //
+
+            var portfolioPhoneScreen2 = new TimelineMax();
+            portfolioPhoneScreen.to(".PhotoCodePhone2", {
+                scrollTrigger: {
+                    trigger: ".PhotoCodeDescription",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "2800px top",
+                },
+                end: "bottom",
+                y: -1542,
+            });
+
+
+            // ==========/ PHOTOCODE: Phone3 /========== //
+
+            var portfolioPhoneScreen = new TimelineMax();
+            portfolioPhoneScreen.to(".PhotoCodePhone3", {
+                scrollTrigger: {
+                    trigger: ".PhotoCodeDescription",
+                    scrub: 1,
+                    start: "-100px center",
+                    end: "2800px top",
+                },
+                end: "bottom",
+                y: -1285,
+            });
+
+            // ==========/ PHOTOCODE: Phone4 /========== //
+
+            var portfolioPhoneScreen2 = new TimelineMax();
+            portfolioPhoneScreen.to(".PhotoCodePhone4", {
+                scrollTrigger: {
+                    trigger: ".PhotoCodeDescription",
+                    scrub: 1,
+                    start: "50px center",
+                    end: "2800px top",
+                },
+                end: "bottom",
+                y: -1028,
+            });
+        </script>
+
+
+        <!-- <section>
+            <section class="project_PortfolioWebpage " id="projectPoint">
+                <div class="portfolioWebpageDescription" id="portfolioDescription">
+                    <div class="portfolioWebsiteTitle ">
+                        <span class="titleBlock"></span>
+                        <h1>Portfolio Website<span class="filler"></span></h1>
+                    </div>
+                    <span class="toolBlock"></span>
+                    <h2>HTML5 | CSS3 | JavaScript<span></span></h2>
+                    <span class="descBlock"></span>
+                    <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
+                        <span></span></h3>
+                    <div class="portfolioWebpageButtons ">
+                        <button>&ltCode&gt</button>
+                        <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
+                                <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
+                                <span>Code</span>
+                            </button>
+                        <button>Deployed</button>
+                    </div>
+                </div>
+                <div class="portfolioWebpageRepresentation ">
+                    <div class="iphoneDemo ">
+                        <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                    </div>
+                    <div class="iphoneDemo2">
+                        <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
+                    </div>
+                    <blockquote class="desktopScreen ">
+                        <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
+                    </blockquote>
+
+                </div>
+            </section>
+
+
+            <script>
+                let sections3 = gsap.utils.toArray(".projects");
+
+                gsap.to(sections3, {
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".project_PortfolioWebpage",
+                        pin: true,
+                        scrub: 1,
+                        snap: 1 / (sections.length - 1),
+                    }
+                });
+
+                // ==========/ PORTFOLLIO: Desktop /========== //
+
+                var portfolioDesktopScreen = new TimelineMax();
+                portfolioDesktopScreen.to(".desktopScreen", {
+                    scrollTrigger: {
+                        trigger: ".projects",
+                        scrub: 1,
+                        start: "-100px top",
+                        end: "bottom",
+                    },
+                    end: "top",
+                    y: -1200,
+                });
+
+                // ==========/ PORTFOLIO: Description /========== //
+
+                var portfolioDesc = new TimelineMax();
+                portfolioDesc.to(".portfolioWebpageDescription", {
+                    scrollTrigger: {
+                        trigger: ".portfolioWebpageDescription",
+                        scrub: 1,
+                        start: "100px center",
+                    },
+                    end: "bottom",
+                    y: -450,
+                });
+
+                $('.titleBlock').css("animation-play-state", "paused");
+                $('.toolBlock').css("animation-play-state", "paused");
+                $('.descBlock').css("animation-play-state", "paused");
+                $(window).scroll(function() {
+                    var hT = $('.descBlock').offset().top,
+                        hH = $('.descBlock').outerHeight(),
+                        wH = $(window).height(),
+                        wS = $(this).scrollTop();
+                    console.log(wS + "    " + (hT + hH - wH));
+                    if (wS > (hT + hH - wH)) {
+                        $('.titleBlock ').css("animation-play-state", "running");
+                        $('.toolBlock ').css("animation-play-state", "running");
+                        $('.descBlock ').css("animation-play-state", "running");
+                        console.log('H1 on the view!');
+                        console.log("FOUND");
+                    }
+                });
+
+                // ==========/ PORTFOLIO: Phone1 /========== //
+
+                var portfolioPhoneScreen = new TimelineMax();
+                portfolioPhoneScreen.to(".iphoneDemo", {
+                    scrollTrigger: {
+                        trigger: ".portfolioWebpageDescription",
+                        scrub: 1,
+                        start: "100px center",
+                    },
+                    end: "bottom",
+                    y: -1542,
+                });
+
+                // ==========/ PORTFOLIO: Phone2 /========== //
+
+                var portfolioPhoneScreen2 = new TimelineMax();
+                portfolioPhoneScreen.to(".iphoneDemo2", {
+                    scrollTrigger: {
+                        trigger: ".portfolioWebpageDescription",
+                        scrub: 1,
+                        start: "100px center",
+                    },
+                    end: "bottom",
+                    y: -969,
+                });
+            </script>
+        </section> -->
+        <!-- </div> -->
+    </div>
     <div class="aboutMeDescription ">
+        <div class="aboutMeAnimation">
+            <h1>ABOUT ME.</h1>
+        </div>
+        <script>
+            // ==========/ PORTFOLIO: ABOUT ME. /========== //
+
+            var aboutMe = new TimelineMax();
+            aboutMe.from(".aboutMeAnimation h1", {
+                scrollTrigger: {
+                    trigger: ".aboutMe",
+                    scrub: 5,
+                    start: "-200px top",
+                    end: "top",
+                    // markers: true,
+                },
+                // end: "bottom",
+                x: -2166,
+            });
+        </script>
         <div class="pictureAndExperience ">
             <div class="profilePic ">
                 <img src="/images/profilePic2.jpg " alt="Profile Picture ">
@@ -130,310 +585,6 @@
             </div>
         </div>
     </div>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'>
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js'>
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js'>
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js'>
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js'></script>
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js'></script>
-
-    <div class="projects ">
-        <div class="projectsTitle ">
-            <h1>PROJECTS.</h1>
-        </div>
-        <section class="project_PortfolioWebpage " id="projectPoint">
-            <div class="portfolioWebpageDescription" id="portfolioDescription">
-                <div class="portfolioWebsiteTitle ">
-                    <span class="titleBlock"></span>
-                    <h1>Portfolio Website<span class="filler"></span></h1>
-                </div>
-                <span class="toolBlock"></span>
-                <h2>HTML5 | CSS3 | JavaScript<span></span></h2>
-                <span class="descBlock"></span>
-                <h3>A professional and interactive way for me to communicate my skills and experience to potential employers. This project is my first deployed website written by myself.
-                    <span></span></h3>
-                <div class="portfolioWebpageButtons ">
-                    <!-- <button>&ltCode&gt</button> -->
-                    <button class="codeBtn " onClick="window.open( 'https://github.com/ZacharyEbaugh/portfolioWebpage', '_blank') ">
-                            <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
-                            <span>Code</span>
-                        </button>
-                    <button>Deployed</button>
-                </div>
-            </div>
-            <div class="portfolioWebpageRepresentation ">
-                <div class="iphoneDemo ">
-                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                </div>
-                <div class="iphoneDemo2">
-                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                </div>
-                <blockquote class="desktopScreen ">
-                    <img src="/images/project_portfolio_webpage/desktopDemo.PNG " id="desktopScreen ">
-                </blockquote>
-
-            </div>
-        </section>
-
-
-        <script>
-            let sections = gsap.utils.toArray(".projects");
-
-            gsap.to(sections, {
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".project_PortfolioWebpage",
-                    pin: true,
-                    scrub: 1,
-                    snap: 1 / (sections.length - 1),
-                }
-            });
-
-            // ==========/ PORTFOLLIO: Desktop /========== //
-
-            var portfolioDesktopScreen = new TimelineMax();
-            portfolioDesktopScreen.to(".desktopScreen", {
-                scrollTrigger: {
-                    trigger: ".projects",
-                    scrub: 1,
-                    start: "-100px top",
-                    end: "bottom",
-                },
-                end: "top",
-                y: -1200,
-            });
-
-            // ==========/ PORTFOLIO: Description /========== //
-
-            var portfolioDesc = new TimelineMax();
-            portfolioDesc.to(".portfolioWebpageDescription", {
-                scrollTrigger: {
-                    trigger: ".portfolioWebpageDescription",
-                    scrub: 1,
-                    start: "100px center",
-                },
-                end: "bottom",
-                y: -450,
-            });
-
-            $('.titleBlock').css("animation-play-state", "paused");
-            $('.toolBlock').css("animation-play-state", "paused");
-            $('.descBlock').css("animation-play-state", "paused");
-            $(window).scroll(function() {
-                var hT = $('.descBlock').offset().top,
-                    hH = $('.descBlock').outerHeight(),
-                    wH = $(window).height(),
-                    wS = $(this).scrollTop();
-                console.log(wS + "    " + (hT + hH - wH));
-                if (wS > (hT + hH - wH)) {
-                    $('.titleBlock ').css("animation-play-state", "running");
-                    $('.toolBlock ').css("animation-play-state", "running");
-                    $('.descBlock ').css("animation-play-state", "running");
-                    console.log('H1 on the view!');
-                    console.log("FOUND");
-                }
-            });
-
-            // ==========/ PORTFOLIO: Phone1 /========== //
-
-            var portfolioPhoneScreen = new TimelineMax();
-            portfolioPhoneScreen.to(".iphoneDemo", {
-                scrollTrigger: {
-                    trigger: ".portfolioWebpageDescription",
-                    scrub: 1,
-                    start: "100px center",
-                },
-                end: "bottom",
-                y: -1800,
-            });
-
-            // ==========/ PORTFOLIO: Phone2 /========== //
-
-            var portfolioPhoneScreen2 = new TimelineMax();
-            portfolioPhoneScreen.to(".iphoneDemo2", {
-                scrollTrigger: {
-                    trigger: ".portfolioWebpageDescription",
-                    scrub: 1,
-                    start: "100px center",
-                },
-                end: "bottom",
-                y: -1500,
-            });
-        </script>
-
-        <section class="project_PhotoCode ">
-            <div class="PhotoCodeDescription">
-                <div class="PhotoCodeTools">
-                    <div class="PhotoCodeTitle">
-                        <span class="PhotoCode_titleBlock"></span>
-                        <h1 style="color: #E7E7E7">PhotoCode<span></span></h1>
-                    </div>
-                    <span class="PhotoCode_toolBlock1"></span>
-                    <h2 style="color: #E7E7E7">ReactNative | PHP | MySQLi<span></span></h2>
-                    <span class="PhotoCode_toolBlock2"></span>
-                    <h2 style="color: #E7E7E7">HTML5 | CSS3 | JavaScript<span></span></h2>
-                    <span class="PhotoCode_descBlock"></span>
-                    <h3 style="color: #E7E7E7">PhotoCode utilizes Apple's Scan-to-Text feature to scan-in, compile, and execute code from your phone. Photocode also features a webpage application to view and edit stored files uploaded from the mobile app.
-                        <span></span></h3>
-                    <div class="PhotoCodeButtons ">
-                        <!-- <button>&ltCode&gt</button> -->
-                        <button class="codeBtn2" onClick="window.open( 'https://github.com/ZacharyEbaugh/PhotoCode', '_blank') ">
-                                    <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
-                                    <span>Code</span>
-                                </button>
-                        <button>In Progress</button>
-                    </div>
-                </div>
-                <blockquote class="PhotoCodeDesktop ">
-                    <img src="/images/project_portfolio_webpage/desktopDemoBlack.PNG " id="desktopScreen ">
-                </blockquote>
-            </div>
-            <div class="portfolioWebpageRepresentation ">
-
-                <div class="PhotoCodePhone1 ">
-                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                </div>
-                <div class="PhotoCodePhone2 ">
-                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                </div>
-                <div class="PhotoCodePhone3 ">
-                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                </div>
-                <div class="PhotoCodePhone4 ">
-                    <img src="/images/iphoneDemo.png " id="PortfolioiPhone ">
-                </div>
-            </div>
-        </section>
-
-        <script>
-            let sections2 = gsap.utils.toArray(".project_PhotoCode");
-
-            gsap.to(sections, {
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".project_PhotoCode",
-                    pin: true,
-                    start: "-130px top",
-                    scrub: 1,
-                    snap: 1 / (sections.length - 1),
-                }
-            });
-
-            // ==========/ PORTFOLIO: Description /========== //
-
-            var portfolioDesc = new TimelineMax();
-            portfolioDesc.to(".PhotoCodeTools", {
-                scrollTrigger: {
-                    trigger: ".PhotoCodeDescription",
-                    scrub: 1,
-                    start: "100px center",
-                },
-                end: "bottom",
-                y: -450,
-            });
-
-            $('.PhotoCode_titleBlock').css("animation-play-state", "paused");
-            $('.PhotoCode_toolBlock1').css("animation-play-state", "paused");
-            $('.PhotoCode_toolBlock2').css("animation-play-state", "paused");
-            $('.PhotoCode_descBlock').css("animation-play-state", "paused");
-            $(window).scroll(function() {
-                var hT = $('.PhotoCode_descBlock').offset().top,
-                    hH = $('.PhotoCode_descBlock').outerHeight(),
-                    wH = $(window).height(),
-                    wS = $(this).scrollTop();
-                console.log(wS + "    " + (hT + hH - wH));
-                if (wS > (hT + hH - wH)) {
-                    $('.PhotoCode_titleBlock ').css("animation-play-state", "running");
-                    $('.PhotoCode_toolBlock1 ').css("animation-play-state", "running");
-                    $('.PhotoCode_toolBlock2 ').css("animation-play-state", "running");
-                    $('.PhotoCode_descBlock ').css("animation-play-state", "running");
-                }
-            });
-
-            // ==========/ PORTFOLLIO: Desktop /========== //
-
-            var portfolioDesktopScreen = new TimelineMax();
-            portfolioDesktopScreen.to(".PhotoCodeDesktop", {
-                scrollTrigger: {
-                    trigger: ".PhotoCodeDescription",
-                    scrub: 1,
-                    start: "-500px top",
-                    end: "bottom",
-
-                },
-                end: "top",
-                y: -400,
-            });
-
-            // ==========/ PORTFOLIO: Phone1 /========== //
-
-            var portfolioPhoneScreen = new TimelineMax();
-            portfolioPhoneScreen.to(".PhotoCodePhone1", {
-                scrollTrigger: {
-                    trigger: ".PhotoCodeDescription",
-                    scrub: 1,
-                    start: "100px center",
-                },
-                end: "bottom",
-                y: -1800,
-            });
-
-            // ==========/ PORTFOLIO: Phone2 /========== //
-
-            var portfolioPhoneScreen2 = new TimelineMax();
-            portfolioPhoneScreen.to(".PhotoCodePhone2", {
-                scrollTrigger: {
-                    trigger: ".PhotoCodeDescription",
-                    scrub: 1,
-                    start: "100px center",
-                },
-                end: "bottom",
-                y: -1500,
-            });
-
-
-            // ==========/ PORTFOLIO: Phone3 /========== //
-
-            var portfolioPhoneScreen = new TimelineMax();
-            portfolioPhoneScreen.to(".PhotoCodePhone3", {
-                scrollTrigger: {
-                    trigger: ".PhotoCodeDescription",
-                    scrub: 1,
-                    start: "-100px center",
-                    markers: true,
-                },
-                end: "bottom",
-                y: -1200,
-            });
-
-            // ==========/ PORTFOLIO: Phone4 /========== //
-
-            var portfolioPhoneScreen2 = new TimelineMax();
-            portfolioPhoneScreen.to(".PhotoCodePhone4", {
-                scrollTrigger: {
-                    trigger: ".PhotoCodeDescription",
-                    scrub: 1,
-                    start: "-100px center",
-                },
-                end: "bottom",
-                y: -900,
-            });
-        </script>
-
-
-        <section>
-            <h1>Clone</h1>
-        </section>
-    </div>
-    </div>
-
 
     <div class="contactMe" id="contactPoint">
         <div class="contactTitle">
