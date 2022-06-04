@@ -288,7 +288,7 @@ body {
 }
 
 .aboutMe {
-    height: 60vw;
+    height: 40vw;
 }
 
 .intro {
@@ -545,7 +545,7 @@ section {
 }
 
 .projectsTitle {
-    background-color: black;
+    /* background-color: black; */
 }
 
 .project_PortfolioWebpage,
@@ -810,11 +810,11 @@ h3 {
 
 @keyframes PhotoCode_descBlock {
     0% {
-        width: 90%;
+        width: 95%;
         left: 0;
     }
     50% {
-        width: 90%;
+        width: 95%;
         left: 0;
     }
     100% {
