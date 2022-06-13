@@ -804,7 +804,7 @@
     /* ========== PhotoCode ==========*/
     
     .project_PhotoCode {
-        background-color: black;
+        background-color: #e7e7e7;
         height: 50vw;
     }
     
@@ -871,7 +871,7 @@
     .PhotoCode_titleBlock {
         height: 4vw;
         margin-left: 2.2vw;
-        background: #e7e7e7;
+        background: black;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -883,7 +883,7 @@
         height: 2.1vw;
         margin-top: 0.1vw;
         margin-left: 2.1vw;
-        background: #e7e7e7;
+        background: black;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -895,7 +895,7 @@
         height: 1.9vw;
         margin-top: 0.3vw;
         margin-left: 2.1vw;
-        background: #e7e7e7;
+        background: black;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -907,7 +907,7 @@
         height: 4vw;
         margin-top: 0.2vw;
         margin-left: 2vw;
-        background: #e7e7e7;
+        background: black;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -926,8 +926,8 @@
     }
     
     .PhotoCodeButtons button {
-        background-color: #e7e7e7;
-        color: black;
+        background-color: black;
+        color: white;
         font-family: 'doppio_oneregular';
         font-size: 1.7vw;
         height: 3vw;
@@ -941,7 +941,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color: black;
         cursor: pointer;
     }
     
@@ -951,7 +951,7 @@
     
     .codeBtn2 img {
         width: 2vw;
-        filter: brightness(0) invert(0);
+        filter: brightness(1) invert(1);
         position: absolute;
         z-index: 2;
         margin-left: 4.7vw;
