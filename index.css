@@ -32,6 +32,90 @@
     }
     /* ========== Top Bar ==========*/
     
+    .tooltipLinkedIn .tooltiptextLinkedIn {
+        visibility: hidden;
+        width: 4.5vw;
+        background-color: #555;
+        font-size: 1vw;
+        font-family: 'doppio_oneregular';
+        /* color: #fff; */
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 0.3vw;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 5.5vw;
+        left: 1.8vw;
+        /* margin-left: -60px; */
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    
+    .tooltipLinkedIn:hover .tooltiptextLinkedIn {
+        visibility: visible;
+        opacity: 1;
+        background-color: black;
+    }
+    
+    .tooltipGitHub .tooltiptextGitHub {
+        visibility: hidden;
+        width: 4.1vw;
+        background-color: #555;
+        font-size: 1vw;
+        font-family: 'doppio_oneregular';
+        /* color: #fff; */
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 0.3vw;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 5.5vw;
+        left: 8vw;
+        /* margin-left: -60px; */
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    
+    .tooltipGitHub:hover .tooltiptextGitHub {
+        visibility: visible;
+        opacity: 1;
+        background-color: black;
+    }
+    
+    .tooltipMail .tooltiptextMail {
+        visibility: hidden;
+        width: 6vw;
+        background-color: #555;
+        font-size: 1vw;
+        font-family: 'doppio_oneregular';
+        /* color: #fff; */
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 0.3vw;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 5.5vw;
+        left: 13.2vw;
+        /* margin-left: -60px; */
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    
+    .tooltipMail:hover .tooltiptextMail {
+        visibility: visible;
+        opacity: 1;
+        background-color: black;
+    }
+    
     .topBar {
         height: 7vw;
         width: 100%;
@@ -49,21 +133,43 @@
         float: right;
     }
     
-    .socialButtons button {
+    .LinkedInButton {
         background: transparent;
         border: none;
         color: white;
         margin-left: 2vw;
+    }
+    
+    .LinkedInButton img {
+        height: 4vw;
+        cursor: pointer;
         filter: brightness(0);
     }
     
-    .socialButtons img {
-        height: 4vw;
-        cursor: pointer;
+    .GitHubButton {
+        background: transparent;
+        border: none;
+        color: white;
+        margin-left: 2vw;
     }
     
-    .contactMeButton {
+    .GitHubButton img {
+        height: 4vw;
+        cursor: pointer;
+        filter: brightness(0);
+    }
+    
+    .mailButton {
+        background: transparent;
+        border: none;
+        color: white;
         margin-left: 2vw;
+    }
+    
+    .mailButton img {
+        height: 4.2vw;
+        cursor: pointer;
+        filter: brightness(0);
     }
     
     .pageTitle {

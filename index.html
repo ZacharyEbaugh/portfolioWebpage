@@ -34,9 +34,17 @@
         </div>
         <div class="topBar">
             <div class="socialButtons">
-                <button onClick="window.open('https://www.linkedin.com/in/zachary-ebaugh-1a3271224/','_blank')"><img src="/images/linkedInLogo.jpg "></button>
-                <button onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') "><img src="/images/GitHub-Mark-120px-plus.png "></button>
-                <a href=" #contactPoint " class="contactMeButton "><img src="/images/mailLogo.png "></a>
+                <div class="tooltipMail">
+                    <a href=" #contactPoint " class="mailButton "><img src="/images/mailLogo.png "><span class="tooltiptextMail">Contact Me</span></a>
+                </div>
+                <div class="tooltipGitHub">
+                    <button class="GitHubButton" onClick="window.open( 'https://github.com/ZacharyEbaugh', '_blank') "><img src="/images/GitHub-Mark-120px-plus.png "><span class="tooltiptextGitHub">GitHub</span></button>
+                </div>
+                <div class="tooltipLinkedIn">
+                    <button class="LinkedInButton" onClick="window.open('https://www.linkedin.com/in/zachary-ebaugh-1a3271224/','_blank')"><img src="/images/linkedInLogo.jpg "><span class="tooltiptextLinkedIn">LinkedIn</span></button>
+                </div>
+
+
             </div>
             <div class="pageTitle ">
                 <a href="#intro" class="introJump ">// zle.</a>
