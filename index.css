@@ -602,7 +602,8 @@
     }
     
     .project_PortfolioWebpage,
-    .project_PhotoCode {
+    .project_PhotoCode,
+    .project_Treehouse {
         height: 40vw;
         display: flex;
         justify-content: center;
@@ -655,7 +656,8 @@
         }
     }
     
-    .titleBlock {
+    .titleBlock,
+    .Treehouse_titleBlock {
         width: 10%;
         height: 4vw;
         margin-left: 2.2vw;
@@ -679,7 +681,8 @@
         animation: toolBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
     }
     
-    .descBlock {
+    .descBlock,
+    .Treehouse_descBlock {
         width: 100%;
         height: 3vw;
         margin-top: 0.2vw;
@@ -692,13 +695,17 @@
         animation: descBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
     }
     
-    .portfolioWebpageDescription {
+    .portfolioWebpageDescription,
+    .TreehouseDescription {
         height: 100%;
         width: 35%;
         padding-top: 12vw;
     }
     
     .portfolioWebpageDescription h1,
+    h2,
+    h3,
+    .TreehouseDescription h1,
     h2,
     h3 {
         color: black;
@@ -709,28 +716,35 @@
     h3,
     .PhotoCodeDescription h1,
     h2,
+    h3,
+    .TreehouseDescription h1,
+    h2,
     h3 {
         font-family: 'doppio_oneregular';
         margin-left: 2vw;
     }
     
-    .portfolioWebpageDescription h1 {
+    .portfolioWebpageDescription h1,
+    .TreehouseDescription h1 {
         font-size: 3.5vw;
         margin-top: 10vw;
     }
     
     .portfolioWebpageDescription h2,
-    .PhotoCodeDescription h2 {
+    .PhotoCodeDescription h2,
+    .TreehouseDescription h2 {
         font-size: 1.7vw;
     }
     
     .portfolioWebpageDescription h3,
-    .PhotoCodeDescription h3 {
+    .PhotoCodeDescription h3,
+    .TreehouseDescription h3 {
         font-size: 1.1vw;
     }
     
     .portfolioWebpageButtons,
-    .PhotoCodeButtons {
+    .PhotoCodeButtons,
+    .TreehouseButtons {
         height: 4vw;
         width: 30vw;
         margin-top: 1vw;
@@ -739,7 +753,8 @@
     }
     
     .portfolioWebpageButtons button,
-    .PhotoCodeButtons button {
+    .PhotoCodeButtons button,
+    .TreehouseButtons button {
         background-color: black;
         color: #e7e7e7;
         font-family: 'doppio_oneregular';
@@ -772,7 +787,8 @@
     }
     /* ========== Representation ==========*/
     
-    .portfolioWebpageRepresentation {
+    .portfolioWebpageRepresentation,
+    .TreehouseRepresentation {
         height: 100%;
         width: 65%;
         /* background-color: rgb(108, 108, 255); */
@@ -990,7 +1006,23 @@
         margin-left: 18vw;
         position: absolute;
     }
+    /* ============================================*/
+    /* ============ Project: Treehouse ============*/
+    /* ============================================*/
+    
+    .TreehouseDesktopHomepage img {
+        height: 25vw;
+        margin-right: 1000vw;
+    }
+    
+    .TreehouseDesktopCompiler img {
+        height: 29vw;
+        margin-top: 30vw;
+        margin-left: 14vw;
+    }
+    /* ===========================================*/
     /* ========== About Me(Scroll Down) ==========*/
+    /* ===========================================*/
     
     .aboutMeDescription {
         height: 100vw;
@@ -1223,6 +1255,9 @@
         font-size: 2vw;
         cursor: pointer;
     }
+    /*=========================================*/
+    /*============= Media Queries =============*/
+    /*=========================================*/
     
     @media (max-width: 450px) {
         .topBar {

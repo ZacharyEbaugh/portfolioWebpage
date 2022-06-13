@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>// zle. </title>
     <link rel="shortcut icon" href="/images/siteIcon.png">
-    <link rel="stylesheet" href="index.css?v=8" />
+    <link rel="stylesheet" href="index.css?v=9" />
 </head>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'>
@@ -430,6 +430,133 @@
             });
         </script>
 
+        <section class="project_Treehouse">
+            <div class="TreehouseDescription">
+                <div class="TreehouseTools">
+                    <div class="TreehouseTitle">
+                        <span class="Treehouse_titleBlock"></span>
+                        <h1 style="color: black">Treehouse<span></span></h1>
+                    </div>
+                    <span class="Treehouse_toolBlock1"></span>
+                    <h2 style="color: black">HTML5 | CSS3 | JavaScript<span></span></h2>
+                    <span class="Treehouse_toolBlock2"></span>
+                    <h2 style="color: black">PHP | MySQLi<span></span></h2>
+                    <span class="Treehouse_descBlock"></span>
+                    <h3 style="color: black">Treehouse is a contact manager webpage application which features user registration/login, account creation/deletion, as well as contact creation/deletion/editing and more.
+                        <span></span></h3>
+                    <div class="TreehouseButtons ">
+                        <!-- <button>&ltCode&gt</button> -->
+                        <button class="codeBtn2" onClick="window.open( 'https://github.com/ZacharyEbaugh/PhotoCode', '_blank') ">
+                            <img src="/images/GitHub-Mark-120px-plus.png " alt="gitHub Mark ">
+                            <span>Code</span>
+                        </button>
+                        <button>In Progress</button>
+                    </div>
+                </div>
+                <blockquote class="TreehouseDesktopHomepage">
+                    <img src="/images/project_PhotoCode/photoCode_desktop_projects.PNG " id="desktopScreen ">
+                </blockquote>
+            </div>
+            <div class="TreehouseRepresentation ">
+                <blockquote class="TreehouseDesktopCompiler">
+                    <img src="/images/project_PhotoCode/photoCode_desktop_projects.PNG " id="desktopScreen ">
+                </blockquote>
+                <!-- <div class="TreehousePhone2 ">
+                    <img src="/images/project_PhotoCode/photoCode_newFile.png " id="PhotoCode_sidebar ">
+                </div>
+                <div class="TreehousePhone3 ">
+                    <img src="/images/project_PhotoCode/PhotoCode _sidebar.png" id="PortfolioiPhone ">
+                </div>
+                <div class="TreehousePhone4 ">
+                    <img src="/images/project_PhotoCode/photoCode_scan-to-text.jpeg " id="PortfolioiPhone ">
+                </div>
+                <div class="TreehousePhone1 ">
+                    <img src="/images/project_PhotoCode/PhotoCode _homepage.png " id="PhotoCode_homepage ">
+                    <object data="/images/project_PhotoCode/PhotoCode_IphoneDemo.pdf" type=""></object>
+                </div> -->
+            </div>
+        </section>
+
+        <script>
+            let sections3 = gsap.utils.toArray(".project_Treehouse");
+
+            gsap.to(sections, {
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".project_Treehouse",
+                    pin: true,
+                    start: "-40px top",
+                    end: "2000px top",
+                    scrub: 1,
+                    snap: 1 / (sections.length - 1),
+                    // markers: true,
+                }
+            });
+
+            // ==========/ PHOTOCODE: Description /========== //
+
+            var portfolioDesc = new TimelineMax();
+            portfolioDesc.to(".TreehouseTools", {
+                scrollTrigger: {
+                    trigger: ".project_Treehouse",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "2800px top",
+                    // markers: true,
+                },
+                end: "bottom",
+                y: -480,
+            });
+
+            $('.Treehouse_titleBlock').css("animation-play-state", "paused");
+            $('.Treehouse_toolBlock1').css("animation-play-state", "paused");
+            $('.Treehouse_toolBlock2').css("animation-play-state", "paused");
+            $('.Treehouse_descBlock').css("animation-play-state", "paused");
+            $(window).scroll(function() {
+                var hT = $('.Treehouse_descBlock').offset().top,
+                    hH = $('.Treehouse_descBlock').outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(this).scrollTop();
+                console.log(wS + "    " + (hT + hH - wH));
+                if (wS > (hT + hH - wH)) {
+                    $('.Treehouse_titleBlock ').css("animation-play-state", "running");
+                    $('.Treehouse_toolBlock1 ').css("animation-play-state", "running");
+                    $('.Treehouse_toolBlock2 ').css("animation-play-state", "running");
+                    $('.Treehouse_descBlock ').css("animation-play-state", "running");
+                }
+            });
+
+            // ==========/ PHOTOCODE: Desktop Homepage /========== //
+
+            var portfolioDesktopScreen = new TimelineMax();
+            portfolioDesktopScreen.to(".TreehouseDesktopHomepage", {
+                scrollTrigger: {
+                    trigger: ".project_Treehouse",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "2800px top",
+
+                },
+                end: "top",
+                y: -460,
+                x: 200
+            });
+
+            // ==========/ PHOTOCODE: Desktop Compiler /========== //
+
+            var portfolioDesktopScreen = new TimelineMax();
+            portfolioDesktopScreen.to(".TreehouseDesktopCompiler", {
+                scrollTrigger: {
+                    trigger: ".project_Treehouse",
+                    scrub: 1,
+                    start: "100px center",
+                    end: "2800px top",
+
+                },
+                end: "top",
+                y: -760,
+            });
+        </script>
 
         <!-- <section>
             <section class="project_PortfolioWebpage " id="projectPoint">
